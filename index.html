@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeonCoder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                black: '#050505',
+                dark: '#0a0a12',
+                gray: '#1a1a2e',
+                neonPink: '#ff00ff',
+                neonCyan: '#00ffff',
+                neonGreen: '#00ff00',
+                neonYellow: '#faff00',
+              }
+            },
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+              display: ['"Orbitron"', 'sans-serif'],
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1a1a2e 1px, transparent 1px), linear-gradient(to bottom, #1a1a2e 1px, transparent 1px)",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e0e0e0;
+      }
+      .cyber-glitch {
+        animation: glitch 1s linear infinite;
+      }
+      @keyframes glitch {
+        2%, 64% { transform: translate(2px,0) skew(0deg); }
+        4%, 60% { transform: translate(-2px,0) skew(0deg); }
+        62% { transform: translate(0,0) skew(5deg); }
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a12; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00ffff; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff00ff; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
